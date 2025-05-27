@@ -24,12 +24,12 @@ class QuestionBuilder:
             choices['d'] = input("Option d: ")
 
             #input the correct answer
-            while True:
-                answer = input("Correct answer (a/b/c/d): ").lower()
-                if answer in choices:
-                    break
-                else:
-                    print("Please choose a, b, c, or d.")
+        while True:
+            answer = input("Correct answer (a/b/c/d): ").lower()
+            if answer in choices:
+                break
+            else:
+                print("Please choose a, b, c, or d.")
 
-            return Question(question, choices, answer)
+        return Question(question, choices, answer)
 
