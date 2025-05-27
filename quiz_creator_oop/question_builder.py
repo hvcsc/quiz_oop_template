@@ -8,6 +8,19 @@ class QuestionBuilder:
         print("\nEnter a question.")
         text = input("Question: ")
 
-#add the choices
-#check if all choices are filled
+        #add the choices
+        choices = {}
+        choices["a"] = input("Option a: ")
+        choices["b"] = input("Option b: ")
+        choices["c"] = input("Option c: ")
+        choices["d"] = input("Option d: ")
+
+        #check if all choices are filled
+        while not all(choices[key] for key in ['a', 'b', 'c', 'd']):
+            print("Please make sure all options are filled in.")
+            choices['a'] = input("Option a: ")
+            choices['b'] = input("Option b: ")
+            choices['c'] = input("Option c: ")
+            choices['d'] = input("Option d: ")
+
 #input the correct answer
