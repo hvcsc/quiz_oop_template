@@ -47,8 +47,18 @@ class QuizGame:
             self.root.quit
         )
         self.question_display.show_question()
-#check answer
-#next question
+
+    #check answer
+    def on_answer_checked(self, correct):
+        if correct:
+            self.score += 1
+
+    #next question
+    def next_question(self):
+        has_next = self.question_display.next_question()
+        if not has_next:
+            self.show_score()
+            
 #pause and resume function
 #show score on the screen
 #main loop
