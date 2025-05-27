@@ -111,5 +111,10 @@ class QuestionsDisplay:
 
         self.on_answer_checked(selected == correct)
 
-#permission to proceed to the next question
+    #permission to proceed to the next question
+    def next_question(self):
+        self.question_index += 1
+        self.next_button.config(state = "disabled")
+        return self.show_question()
+
 #clear screen
