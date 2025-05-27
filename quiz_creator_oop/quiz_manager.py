@@ -4,6 +4,9 @@ class QuizManager:
     def __init__(self, filename = "quiz_key.txt"):
         self.filename = filename
         self.questions = []
+        
+        #append questions
+        def add_question(self, question):
+            self.questions.append(question)
 
-#append questions
 #save inputs to file
