@@ -10,6 +10,19 @@ class ScoreScreen:
         self.total_questions = total_questions
         self.restart_callback = restart_callback
         self.exit_callback = exit_callback
-        
-#congratulatory message, score, restart, and exit button display
+
+    #congratulatory message, score, restart, and exit button display
+    def show(self):
+        self.clear_screen()
+        frame = tk.Frame(self.root, bg = "#EAE0D5")
+        frame.place(relx = 0.5, rely = 0.5, anchor = "center")
+
+        congrats_label = tk.Label(
+            frame,
+            text = "Congratulations!",
+            font = ("Times New Roman", 22, "bold"),
+            bg = "#EAE0D5",
+            fg = "#22333B"
+        )
+        congrats_label.pack(pady = 10)
 #clear screen
