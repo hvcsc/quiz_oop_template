@@ -30,4 +30,7 @@ class PauseScreen:
         )
         resume_button.place(relx = 0.5, rely = 0.6, anchor = "center")
 
-#clear screen
+    #clear screen
+    def clear_screen(self):
+        for widget in self.root.winfo_children():
+            widget.destroy()
