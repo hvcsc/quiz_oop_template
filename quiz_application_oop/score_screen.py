@@ -25,4 +25,23 @@ class ScoreScreen:
             fg = "#22333B"
         )
         congrats_label.pack(pady = 10)
+
+        score_label = tk.Label(
+            frame,
+            text = f"Score: {self.score}/{self.total_questions}",
+            font = ("Times New Roman", 18),
+            bg = "#EAE0D5",
+            fg = "#22333B"
+        )
+        score_label.pack(pady = 5)
+
+        restart_button = tk.Button(
+            frame,
+            text = "Restart",
+            font = ("Times New Roman", 14),
+            bg = "#C6AC8E",
+            fg = "#0A0908",
+            command = self.restart_callback
+        )
+        restart_button.pack(pady = 10)
 #clear screen
