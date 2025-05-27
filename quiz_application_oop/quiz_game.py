@@ -58,7 +58,22 @@ class QuizGame:
         has_next = self.question_display.next_question()
         if not has_next:
             self.show_score()
-            
-#pause and resume function
+
+    #pause and resume function
+    def toggle_pause(self):
+        if self.is_paused:
+            self.is_paused = False
+            self.question_display.is_paused = False
+            self.question_display.show_question()
+        else:
+            self.is_paused = True
+            self.question_display.is_paused = True
+            self.pause_screen.show()
+
+    def resume_quiz(self):
+        self.is_paused = False
+        self.question_display.is_paused = False
+        self.question_display.show_question()
+        
 #show score on the screen
 #main loop
