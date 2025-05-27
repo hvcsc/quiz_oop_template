@@ -87,3 +87,7 @@ class QuizGame:
         self.score_screen.show()
 
 #main loop
+if __name__ == "__main__":
+    root = tk.Tk()
+    app = QuizGame(root)
+    root.mainloop()
