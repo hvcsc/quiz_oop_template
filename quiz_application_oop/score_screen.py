@@ -44,4 +44,14 @@ class ScoreScreen:
             command = self.restart_callback
         )
         restart_button.pack(pady = 10)
+
+        exit_button = tk.Button(
+            frame,
+            text = "Exit",
+            font = ("Times New Roman", 14),
+            bg = "#5E503F",
+            fg = "white",
+            command = self.exit_callback
+        )
+        exit_button.pack()
 #clear screen
