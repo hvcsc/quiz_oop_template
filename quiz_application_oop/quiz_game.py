@@ -31,8 +31,22 @@ class QuizGame:
         self.score_screen = None
 
         self.start_screen.show()
-        
-#start quiz function
+
+    #start quiz function
+    def start_quiz(self):
+        self.score = 0
+        self.question_index = 0
+        self.is_paused = False
+
+        self.question_display = QuestionsDisplay(
+            self.root,
+            self.questions,
+            self.on_answer_checked,
+            self.next_question,
+            self.toggle_pause,
+            self.root.quit
+        )
+        self.question_display.show_question()
 #check answer
 #next question
 #pause and resume function
