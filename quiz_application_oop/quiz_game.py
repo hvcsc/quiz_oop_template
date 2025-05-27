@@ -74,6 +74,16 @@ class QuizGame:
         self.is_paused = False
         self.question_display.is_paused = False
         self.question_display.show_question()
-        
-#show score on the screen
+
+    #show score on the screen
+    def show_score(self):
+        self.score_screen = ScoreScreen(
+            self.root,
+            self.score,
+            len(self.questions),
+            self.start_quiz,
+            self.root.quit
+        )
+        self.score_screen.show()
+
 #main loop
