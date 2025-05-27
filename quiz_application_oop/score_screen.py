@@ -54,4 +54,8 @@ class ScoreScreen:
             command = self.exit_callback
         )
         exit_button.pack()
-#clear screen
+
+    #clear screen
+    def clear_screen(self):
+        for widget in self.root.winfo_children():
+            widget.destroy()
