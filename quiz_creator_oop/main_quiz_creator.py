@@ -6,6 +6,15 @@ from quiz_manager import QuizManager
 def main():
     builder = QuestionBuilder()
     quiz = QuizManager()
+
+    #ask if the user wants to add more question
+    while True:
+        question = builder.create_question()
+        quiz.add_question(question)
+
+        cont = input("Do you want to enter another question? (y/n): ").strip().lower()
+        if cont != "y":
+            print("Bye.")
+            break
     
-#ask if the user wants to add more question
 #save and exit
