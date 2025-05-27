@@ -22,7 +22,7 @@ class QuizGame:
         self.is_paused = False
 
         self.question_loader = QuestionLoader()
-        self.questions = self.question_loader.load_questions()
+        self.questions = self.question_loader.load_question()
         random.shuffle(self.questions)
 
         self.start_screen = StartScreen(self.root, self.start_quiz)
