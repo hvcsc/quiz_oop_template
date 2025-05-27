@@ -6,7 +6,7 @@ class QuestionBuilder:
     #create questions
     def create_question(self):
         print("\nEnter a question.")
-        text = input("Question: ")
+        question = input("Question: ")
 
         #add the choices
         choices = {}
@@ -31,5 +31,5 @@ class QuestionBuilder:
                 else:
                     print("Please choose a, b, c, or d.")
 
-            return Question(text, choices, answer)
+            return Question(question, choices, answer)
 
