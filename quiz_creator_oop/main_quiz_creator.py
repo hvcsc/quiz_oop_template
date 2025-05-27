@@ -16,5 +16,10 @@ def main():
         if cont != "y":
             print("Bye.")
             break
-    
-#save and exit
+
+    #save and exit
+    quiz.save_to_file()
+
+if __name__ == "__main__":
+    main()
+
