@@ -1,4 +1,7 @@
 #import files
+from question_builder import QuestionBuilder
+from quiz_manager import QuizManager
+
 #define imported files
 #ask if the user wants to add more question
 #save and exit
