@@ -55,41 +55,41 @@ class QuestionsDisplay:
             self.answer_buttons.append((key, btn))
 
             #control buttons on the bottom
-            self.bottom_frame = tk.Frame(self.root, bg = "#EAE0D5")
-            self.bottom_frame.pack(side = "bottom", pady = 20)
+        self.bottom_frame = tk.Frame(self.root, bg = "#EAE0D5")
+        self.bottom_frame.pack(side = "bottom", pady = 20)
 
-            self.pause_button = tk.Button(
-                self.bottom_frame,
-                text = "Pause",
-                font = ("Times New Roman", 12),
-                bg = "#C6AC8E",
-                fg = "#0A0908",
-                command = self.on_pause
-            )
-            self.pause_button.pack(side = "left", padx=20)
+        self.pause_button = tk.Button(
+            self.bottom_frame,
+            text = "Pause",
+            font = ("Times New Roman", 12),
+            bg = "#C6AC8E",
+            fg = "#0A0908",
+            command = self.on_pause
+        )
+        self.pause_button.pack(side = "left", padx=20)
 
-            self.next_button = tk.Button(
-                self.bottom_frame,
-                text = "Next",
-                font = ("Times New Roman", 12),
-                bg = "#C6AC8E",
-                fg = "#0A0908",
-                command = self.on_next,
-                state = "disabled"
-            )
-            self.next_button.pack(side = "left", padx = 20)
+        self.next_button = tk.Button(
+            self.bottom_frame,
+            text = "Next",
+            font = ("Times New Roman", 12),
+            bg = "#C6AC8E",
+            fg = "#0A0908",
+            command = self.on_next,
+            state = "disabled"
+        )
+        self.next_button.pack(side = "left", padx = 20)
 
-            self.exit_button = tk.Button(
-                self.bottom_frame,
-                text = "Exit",
-                font = ("Times New Roman", 12),
-                bg = "#5E503F",
-                fg = "white",
-                command = self.on_exit
-            )
-            self.exit_button.pack(side = "right", padx = 20)
+        self.exit_button = tk.Button(
+            self.bottom_frame,
+            text = "Exit",
+            font = ("Times New Roman", 12),
+            bg = "#5E503F",
+            fg = "white",
+            command = self.on_exit
+        )
+        self.exit_button.pack(side = "right", padx = 20)
 
-            return True
+        return True
 
     #check answer
     def check_answer(self, selected):
